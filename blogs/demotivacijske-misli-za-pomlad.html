@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demotivacijske misli za pomlad, ko bi moral biti svež, pa si samo utrujen - demotivacija.si</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f4f0ea;
+            --text: #1a1a1a;
+            --accent: #ffcc00;
+            --accent-2: #ff4d4d;
+            --border: 4px solid #1a1a1a;
+            --shadow: 6px 6px 0px #1a1a1a;
+            --hover-shadow: 10px 10px 0px #1a1a1a;
+        }
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .comic-font {
+            font-family: 'Carter One', cursive;
+            letter-spacing: 1px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* HEADER (Consistent paths) */
+        .site-header {
+            background: #fff;
+            border-bottom: var(--border);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 2rem;
+            color: #1a1a1a;
+            background: var(--accent);
+            padding: 0.5rem 1rem;
+            border: var(--border);
+            box-shadow: 4px 4px 0px #1a1a1a;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .nav-links a:hover {
+            border: 2px solid #1a1a1a;
+            background: var(--accent-2);
+            color: #fff;
+            box-shadow: 3px 3px 0px #1a1a1a;
+        }
+
+        /* BLOG DETAIL LAYOUT */
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: #fff;
+            border: var(--border);
+            padding: 0.5rem 1.5rem;
+            font-weight: bold;
+            box-shadow: 4px 4px 0px #1a1a1a;
+            margin-bottom: 2rem;
+            transition: all 0.2s;
+        }
+
+        .back-btn:hover {
+            background: var(--accent);
+            transform: translateY(-2px) translateX(-2px);
+            box-shadow: 6px 6px 0px #1a1a1a;
+        }
+
+        .blog-layout {
+            display: flex;
+            gap: 3rem;
+            background: #fff;
+            border: var(--border);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+        }
+
+        .blog-sidebar {
+            flex: 0 0 40%;
+        }
+
+        .cover-image {
+            width: 100%;
+            border: var(--border);
+            box-shadow: 4px 4px 0px #1a1a1a;
+            display: block;
+        }
+
+        .blog-main {
+            flex: 1;
+        }
+
+        .blog-header h1 {
+            font-size: 3rem;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-meta {
+            display: inline-block;
+            background: var(--accent-2);
+            color: #fff;
+            padding: 0.25rem 1rem;
+            border: 2px solid #1a1a1a;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        .excerpt-box {
+            font-size: 1.25rem;
+            font-weight: 600;
+            background: var(--bg);
+            padding: 1.5rem;
+            border-left: 6px solid var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        /* EXPLICIT PROSE CSS FROM PROMPT */
+        .prose p {
+            margin-bottom: 1.25em;
+            line-height: 1.75;
+        }
+        
+        .prose img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #1a1a1a;
+            margin: 1.5rem 0;
+        }
+
+        .prose h2, .prose h3 {
+            margin-top: 2rem;
+            color: var(--accent-2);
+        }
+
+        /* FOOTER */
+        .site-footer {
+            background: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 3rem 1rem;
+            margin-top: 4rem;
+            border-top: var(--border);
+        }
+
+        @media (max-width: 900px) {
+            .blog-layout {
+                flex-direction: column;
+            }
+            .blog-sidebar {
+                flex: none;
+                width: 100%;
+            }
+            .blog-header h1 {
+                font-size: 2rem;
+            }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="../index.html" class="logo comic-font">Demotivacija.si</a>
+        <nav class="nav-links">
+            <a href="../index.html">Domov</a>
+            <a href="../zakaj.html">Zakaj smo tu?</a>
+            <a href="../privacy.html">Zasebnost</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <a href="../index.html" class="back-btn">← Nazaj v realnost (Domov)</a>
+        
+        <article class="blog-layout">
+            <aside class="blog-sidebar">
+                <img src="../images/demotivacijske-misli-za-pomlad.jpg" alt="Demotivacijske misli za pomlad, ko bi moral biti svež, pa si samo utrujen" class="cover-image">
+            </aside>
+            
+            <main class="blog-main">
+                <header class="blog-header">
+                    <h1>Demotivacijske misli za pomlad, ko bi moral biti svež, pa si samo utrujen</h1>
+                    <div class="blog-meta">17. April 2026</div>
+                </header>
+                
+                <div class="excerpt-box">
+                    Pomlad ima dober PR. Na fotografijah je vse zeleno, ljudje tečejo ob jezeru, nekdo nekje pije limonado in piše, da je čas za nov začetek. V resnici pa marsikdo komaj preživi prvo resno alergijo.
+                </div>
+                
+                <div class="prose content-body">
+                    <h1>Demotivacijske misli za pomlad, ko bi moral biti svež, pa si samo utrujen</h1>
+<p>Pomlad ima dober PR. Na fotografijah je vse zeleno, ljudje tečejo ob jezeru, nekdo nekje pije limonado in piše, da je čas za nov začetek. V resnici pa marsikdo komaj preživi menjavo ure, cvetni prah, prvo košnjo soseda ob sedmih zjutraj in vprašanje, zakaj še vedno ni začel živeti bolj zdravo.</p>
+<p>Demotivacija spomladi ni nujno znak, da je s tabo nekaj narobe. Včasih je samo realen odziv na družbeni pritisk, da moraš biti marca in aprila že skoraj nova oseba. Zima ti je pustila premalo energije, poletje še ni dovolj blizu, pomlad pa stoji na vratih in ti prodaja idejo, da bi moral pospraviti omaro, začeti teči, saditi zelišča in se na splošno obnašati kot človek, ki ima urejeno življenje.</p>
+<p>Prva poštena pomladna misel je: če sonce sije, to še ne pomeni, da imam osebnost za sprehod. Včasih je lep dan samo lep dan, ti pa si še vedno oseba, ki je zjutraj pet minut gledala v nogavice in se odločala, ali je dovolj odraslo obuti dve podobni, ne enaki.</p>
+<p>Druga misel: narava se prebuja, jaz pa bi raje še malo dremal. Drevesa imajo očitno boljši sistem upravljanja energije kot ljudje. Ko pride čas, zacvetijo. Ko pride naš čas, odpremo elektronsko pošto, vidimo tri nujne zadeve in se vprašamo, ali bi bilo pretvarjanje, da smo na terenu, moralno sprejemljivo.</p>
+<p>Tretja misel: spomladansko čiščenje je izraz, ki ga je izumil nekdo, ki ni imel predala s kabli. Vsak dom ima en predal, v katerem živijo stari polnilci, navodila za naprave, ki jih ni več, dva neznana ključa in občutek krivde. Ko ga odpreš, ne čistiš več stanovanja, ampak preteklost.</p>
+<p>Četrta misel: motivacija pride in gre, prah pa ostane. Zato je bolj realno, da si za cilj ne postaviš popolnega novega začetka, ampak en majhen premik. Operi okno. Pojdi na krajši sprehod. Odgovori na eno sporočilo. Ne zato, ker boš postal nova oseba, ampak zato, ker bo stara oseba malo lažje dihala.</p>
+<p>Pomladni humor deluje zato, ker prizna nekaj, kar vsi vemo: ljudje nismo koledar. Ne spremenimo se avtomatsko, ko se spremeni vreme. Aprila lahko še vedno nosiš januarsko utrujenost. Maja lahko še vedno iščeš voljo za stvari, ki si jih obljubil januarja. To ni idealno, je pa zelo človeško.</p>
+<p>Če bi morali iz pomladi potegniti eno uporabno demotivacijsko pravilo, bi bilo to: ne rabiš zacveteti, dovolj je, da ne oveniš. To je manj dramatično, manj za Instagram, ampak precej bolj uporabno. Včasih je uspeh že to, da odpreš okno, prezračiš sobo in ne začneš novega življenja ob 22.47, ker si videl motivacijski video.</p>
+<p>Naj bo pomlad torej manj velik projekt in bolj majhen dogovor s sabo. Malo manj primerjanja z ljudmi, ki že planirajo vikend pohode. Malo več razumevanja za dejstvo, da je tudi počasno prebujanje še vedno prebujanje. Če narava rabi nekaj mesecev, da pride k sebi, jih lahko tudi ti.</p>
+<p>Za blog, kot je demotivacija.si, je ravno ta prizemljenost najboljša smer. Bralec ne potrebuje pridige, da bo vse čudovito, če samo spremeni misli. Potrebuje stavek, ob katerem se nasmehne, ker prepozna svoj jutranji boj z budilko, prahom in prevelikimi načrti. Humor je boljši, ko ne beži pred resnico, ampak jo pove dovolj mehko, da jo lahko prežvečimo ob kavi.</p>
+
+                </div>
+            </main>
+        </article>
+    </div>
+
+    <footer class="site-footer">
+        <p class="comic-font" style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--accent);">Demotivacija.si</p>
+        <p>© 2026. Vse pravice pridržane, čeprav nam je vseeno.</p>
+    </footer>
+
+</body>
+</html>
