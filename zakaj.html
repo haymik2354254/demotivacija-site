@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakaj smo tu? - demotivacija.si</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* SAME SHARED CSS AS INDEX */
+        :root {
+            --bg: #f4f0ea;
+            --text: #1a1a1a;
+            --accent: #ffcc00;
+            --accent-2: #ff4d4d;
+            --border: 4px solid #1a1a1a;
+            --shadow: 6px 6px 0px #1a1a1a;
+        }
+        body { font-family: 'Rubik', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 0; line-height: 1.6; }
+        h1, h2, h3, .comic-font { font-family: 'Carter One', cursive; letter-spacing: 1px; }
+        a { text-decoration: none; color: inherit; }
+        
+        .site-header { background: #fff; border-bottom: var(--border); padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 2rem; color: #1a1a1a; background: var(--accent); padding: 0.5rem 1rem; border: var(--border); box-shadow: 4px 4px 0px #1a1a1a; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 1.5rem; }
+        .nav-links a { font-weight: 800; text-transform: uppercase; padding: 0.5rem 1rem; border: 2px solid transparent; transition: all 0.2s; }
+        .nav-links a:hover { border: 2px solid #1a1a1a; background: var(--accent-2); color: #fff; box-shadow: 3px 3px 0px #1a1a1a; }
+        
+        .container { max-width: 800px; margin: 4rem auto; padding: 0 1.5rem; }
+        .page-content { background: #fff; border: var(--border); box-shadow: var(--shadow); padding: 3rem; transform: rotate(0.5deg); }
+        .page-title { background: var(--accent); display: inline-block; padding: 0.5rem 1rem; border: var(--border); margin-top: -5rem; margin-bottom: 2rem; transform: rotate(-2deg); box-shadow: 4px 4px 0px #1a1a1a; font-size: 2.5rem; }
+        
+        .prose p { margin-bottom: 1.25em; line-height: 1.75; font-size: 1.1rem; }
+        
+        .site-footer { background: #1a1a1a; color: #fff; text-align: center; padding: 3rem 1rem; margin-top: 4rem; border-top: var(--border); }
+        
+        @media (max-width: 768px) { .nav-links { display: none; } .page-content { padding: 1.5rem; } }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="logo comic-font">Demotivacija.si</a>
+        <nav class="nav-links">
+            <a href="index.html">Domov</a>
+            <a href="zakaj.html">Zakaj smo tu?</a>
+            <a href="privacy.html">Zasebnost</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="page-content prose">
+            <h1 class="page-title comic-font">Zakaj sploh obstajamo?</h1>
+            <p>Iskreno? Ker nekdo mora na glas povedati, da se nam ne da. Internet je prepoln popolnih jutranjih rutin, kjer ljudje ob 5:00 zjutraj pijejo matcha čaj, telovadijo, meditirajo in rešujejo svet, preden mi sploh pritisnemo "snooze" na budilki že tretjič.</p>
+            <p><strong>Demotivacija.si</strong> je varno zatočišče za vse, ki vemo, da je življenje včasih absurdno, služba naporna, zmenki čudni in da je največji uspeh dneva to, da nismo zažgali večerje.</p>
+            <p>Tu ne boste našli nasvetov za osebnostno rast. Ne bomo vas motivirali, da postanete "najboljša verzija sebe". Naš cilj je zgolj to, da skupaj zavijemo z očmi, se nasmejimo situacijam, na katere nimamo vpliva, in gremo mirno naprej.</p>
+            <p>Dobrodošli v klubu. Vzemi si kavo (ali pivo, ne obsojamo) in beri naprej.</p>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p class="comic-font" style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--accent);">Demotivacija.si</p>
+        <p>© 2026. Vse pravice pridržane, čeprav nam je vseeno.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zasebnost - demotivacija.si</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* SAME SHARED CSS AS INDEX */
+        :root {
+            --bg: #f4f0ea;
+            --text: #1a1a1a;
+            --accent: #ffcc00;
+            --accent-2: #ff4d4d;
+            --border: 4px solid #1a1a1a;
+            --shadow: 6px 6px 0px #1a1a1a;
+        }
+        body { font-family: 'Rubik', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 0; line-height: 1.6; }
+        h1, h2, h3, .comic-font { font-family: 'Carter One', cursive; letter-spacing: 1px; }
+        a { text-decoration: none; color: inherit; }
+        
+        .site-header { background: #fff; border-bottom: var(--border); padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 2rem; color: #1a1a1a; background: var(--accent); padding: 0.5rem 1rem; border: var(--border); box-shadow: 4px 4px 0px #1a1a1a; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 1.5rem; }
+        .nav-links a { font-weight: 800; text-transform: uppercase; padding: 0.5rem 1rem; border: 2px solid transparent; transition: all 0.2s; }
+        .nav-links a:hover { border: 2px solid #1a1a1a; background: var(--accent-2); color: #fff; box-shadow: 3px 3px 0px #1a1a1a; }
+        
+        .container { max-width: 800px; margin: 4rem auto; padding: 0 1.5rem; }
+        .page-content { background: #fff; border: var(--border); box-shadow: var(--shadow); padding: 3rem; transform: rotate(-0.5deg); }
+        .page-title { background: var(--accent-2); color: #fff; display: inline-block; padding: 0.5rem 1rem; border: var(--border); margin-top: -5rem; margin-bottom: 2rem; transform: rotate(1deg); box-shadow: 4px 4px 0px #1a1a1a; font-size: 2.5rem; }
+        
+        .prose p { margin-bottom: 1.25em; line-height: 1.75; font-size: 1.1rem; }
+        .prose h2 { margin-top: 2rem; color: #1a1a1a; }
+        
+        .site-footer { background: #1a1a1a; color: #fff; text-align: center; padding: 3rem 1rem; margin-top: 4rem; border-top: var(--border); }
+        
+        @media (max-width: 768px) { .nav-links { display: none; } .page-content { padding: 1.5rem; } }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="logo comic-font">Demotivacija.si</a>
+        <nav class="nav-links">
+            <a href="index.html">Domov</a>
+            <a href="zakaj.html">Zakaj smo tu?</a>
+            <a href="privacy.html">Zasebnost</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="page-content prose">
+            <h1 class="page-title comic-font">Politika zasebnosti</h1>
+            
+            <h2>1. Kdo smo mi in zakaj nas briga?</h2>
+            <p>Kratek odgovor: Ne briga nas. Vaši osebni podatki so nam večinoma popolnoma nezanimivi. Smo samo statična blog stran, ki poskuša biti smešna.</p>
+
+            <h2>2. Kaj zbiramo?</h2>
+            <p>Ker smo statična spletna stran, ne zahtevamo vašega e-maila, rojstnega dneva ali prvorojenca. Če brskalnik ali ponudnik gostovanja shrani kakšen piškotek za osnovno delovanje (ali analitiko, da vidimo, če nas sploh kdo bere), se s tem žal morate sprijazniti. To je internet leta 2026.</p>
+
+            <h2>3. Kaj počnemo z vašimi podatki?</h2>
+            <p>Nič. Nimamo ne časa ne energije, da bi vas tajno sledili in vam prodajali personalizirane oglase za motivacijske seminarje (fuj). Vaša zasebnost je varna predvsem zato, ker smo preveč leni, da bi jo ogrožali.</p>
+
+            <h2>4. Vaše pravice</h2>
+            <p>Imate pravico, da zaprete ta zavihek, ugasnete računalnik in greste na sprehod. Če imate kakršna koli vprašanja glede te "politike", predlagamo, da globoko vdihnete in se spomnite, da ta stran obstaja izključno za zabavo.</p>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p class="comic-font" style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--accent);">Demotivacija.si</p>
+        <p>© 2026. Vse pravice pridržane, čeprav nam je vseeno.</p>
+    </footer>
+
+</body>
+</html>

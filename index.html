@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demotivacija.si - Dobrodošli v realnosti</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f4f0ea;
+            --text: #1a1a1a;
+            --accent: #ffcc00;
+            --accent-2: #ff4d4d;
+            --border: 4px solid #1a1a1a;
+            --shadow: 6px 6px 0px #1a1a1a;
+            --hover-shadow: 10px 10px 0px #1a1a1a;
+        }
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .comic-font {
+            font-family: 'Carter One', cursive;
+            letter-spacing: 1px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* HEADER */
+        .site-header {
+            background: #fff;
+            border-bottom: var(--border);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 2rem;
+            color: #1a1a1a;
+            background: var(--accent);
+            padding: 0.5rem 1rem;
+            border: var(--border);
+            box-shadow: 4px 4px 0px #1a1a1a;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .nav-links a:hover {
+            border: 2px solid #1a1a1a;
+            background: var(--accent-2);
+            color: #fff;
+            box-shadow: 3px 3px 0px #1a1a1a;
+        }
+
+        /* MAIN CONTAINER */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        /* HERO TAGLINE */
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 0px var(--accent);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            font-weight: 600;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 1rem;
+            border: var(--border);
+            box-shadow: var(--shadow);
+            transform: rotate(-1deg);
+        }
+
+        /* EVERGREEN MEMES */
+        .evergreen-memes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .meme-box {
+            background: #fff;
+            border: var(--border);
+            box-shadow: var(--shadow);
+            padding: 0.5rem;
+            transform: rotate(1deg);
+        }
+
+        .meme-box:nth-child(2) { transform: rotate(-2deg); }
+        .meme-box:nth-child(3) { transform: rotate(1.5deg); }
+
+        .meme-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 2px solid #1a1a1a;
+        }
+
+        /* FEATURED POST */
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            display: inline-block;
+            background: var(--accent);
+            padding: 0.5rem 1rem;
+            border: var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .featured-card {
+            display: block;
+            background: #fff;
+            border: var(--border);
+            box-shadow: var(--shadow);
+            margin-bottom: 4rem;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .featured-card:hover {
+            transform: translateY(-4px) translateX(-4px);
+            box-shadow: var(--hover-shadow);
+        }
+
+        .featured-img-wrap {
+            width: 100%;
+            height: 450px;
+            border-bottom: var(--border);
+            overflow: hidden;
+        }
+
+        .featured-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .featured-content {
+            padding: 2rem;
+        }
+
+        .featured-content h2 {
+            font-size: 2.5rem;
+            margin: 0 0 1rem 0;
+        }
+
+        .featured-content p {
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        /* ARCHIVE GRID (2 Cards per row) */
+        .archive-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+        }
+
+        .archive-card {
+            display: block;
+            position: relative;
+            background: #fff;
+            border: var(--border);
+            box-shadow: var(--shadow);
+            height: 350px;
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        .archive-card:hover {
+            transform: translateY(-4px) translateX(-4px);
+            box-shadow: var(--hover-shadow);
+        }
+
+        .archive-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-date {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent-2);
+            color: #fff;
+            padding: 0.25rem 0.75rem;
+            border: 2px solid #1a1a1a;
+            font-weight: bold;
+            box-shadow: 2px 2px 0px #1a1a1a;
+            z-index: 2;
+        }
+
+        .card-title-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(26, 26, 26, 0.95);
+            color: #fff;
+            padding: 1.5rem;
+            border-top: var(--border);
+            z-index: 2;
+        }
+
+        .card-title-overlay h3 {
+            margin: 0;
+            font-size: 1.4rem;
+            color: var(--accent);
+        }
+
+        /* PROSE EXPLICIT RULE */
+        .prose p {
+            margin-bottom: 1.25em;
+            line-height: 1.75;
+        }
+
+        /* FOOTER */
+        .site-footer {
+            background: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 3rem 1rem;
+            margin-top: 4rem;
+            border-top: var(--border);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .evergreen-memes { grid-template-columns: 1fr; }
+            .archive-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; /* In a real app, a burger menu goes here */ }
+            .featured-img-wrap { height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="logo comic-font">Demotivacija.si</a>
+        <nav class="nav-links">
+            <a href="index.html">Domov</a>
+            <a href="zakaj.html">Zakaj smo tu?</a>
+            <a href="privacy.html">Zasebnost</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <section class="hero">
+            <h1>Pričakuj manj.</h1>
+            <p>Slovenski humor za ljudi, ki vedo, da je odraslost v bistvu samo plačevanje položnic in čakanje na petek. Dobrodošli v realnosti.</p>
+        </section>
+
+        <section class="evergreen-memes">
+            <div class="meme-box">
+                <img src="images/meme-1.jpg" alt="Ponedeljek je tukaj">
+            </div>
+            <div class="meme-box">
+                <img src="images/meme-2.jpg" alt="Maček na tipkovnici">
+            </div>
+            <div class="meme-box">
+                <img src="images/meme-3.jpg" alt="Stanje na računu">
+            </div>
+        </section>
+
+        
+        
+        
+        <h2 class="section-title">Najbolj sveže razočaranje</h2>
+        <a href="blogs/skupinski-projekti-in-izgovori.html" class="featured-card">
+            <div class="featured-img-wrap">
+                <img src="images/skupinski-projekti-in-izgovori.jpg" alt="Zakaj se skupinski projekti vedno končajo z enim človekom in štirinajstimi izgovori">
+            </div>
+            <div class="featured-content">
+                <h2>Zakaj se skupinski projekti vedno končajo z enim človekom in štirinajstimi izgovori</h2>
+                <span class="card-date" style="position:relative; top:0; right:0; display:inline-block; margin-bottom: 1rem;">26. May 2026</span>
+                <p>Skupinski projekti so ena najbolj poštenih oblik socialnega eksperimenta. Na začetku vsi obljubijo sodelovanje, na koncu pa eden dela, drugi pa razlagajo, zakaj niso mogli.</p>
+            </div>
+        </a>
+
+        <h2 class="section-title">Arhiv vsakdanjih tragedij</h2>
+        <div class="archive-grid">
+            
+            <a href="blogs/smesne-misli-o-sluzbi.html" class="archive-card">
+                <div class="card-date">08. May 2026</div>
+                <img src="images/smesne-misli-o-sluzbi.jpg" alt="Smešne misli o službi, ko je kratek sestanek najdaljši del dneva">
+                <div class="card-title-overlay">
+                    <h3>Smešne misli o službi, ko je kratek sestanek najdaljši del dneva</h3>
+                </div>
+            </a>
+            
+            <a href="blogs/demotivacijske-misli-za-pomlad.html" class="archive-card">
+                <div class="card-date">17. April 2026</div>
+                <img src="images/demotivacijske-misli-za-pomlad.jpg" alt="Demotivacijske misli za pomlad, ko bi moral biti svež, pa si samo utrujen">
+                <div class="card-title-overlay">
+                    <h3>Demotivacijske misli za pomlad, ko bi moral biti svež, pa si samo utrujen</h3>
+                </div>
+            </a>
+            
+        </div>
+        
+
+    </div>
+
+    <footer class="site-footer">
+        <p class="comic-font" style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--accent);">Demotivacija.si</p>
+        <p>© 2026. Vse pravice pridržane, čeprav nam je vseeno.</p>
+    </footer>
+
+</body>
+</html>
