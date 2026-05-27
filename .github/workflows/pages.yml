@@ -1,0 +1,50 @@
+name: Build and Deploy Python Site
+on:
+  workflow_dispatch:          # Manual "Run workflow" button
+  schedule:
+    - cron: '31 5 */4 * *'       # Runs every day at 08:00 UTC (we can change this per site)
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+        
+      - name: Run Generation Scripts
+        run: |
+          python generate_blogs.py
+          python build.py
+          
+      - name: Prepare Public Folder
+
+        run: |
+          mkdir public
+          cp -r blogs images public/
+          cp index.html zakaj.html privacy.html public/ || true
+          
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public/
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
