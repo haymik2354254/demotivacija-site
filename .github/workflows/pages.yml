@@ -28,7 +28,7 @@ jobs:
         run: |
           mkdir public
           cp -r blogs images public/
-          cp index.html zakaj.html privacy.html sitemap.xml public/ || true
+          cp index.html zakaj.html privacy.html sitemap.xml robots.txt public/ || true
           
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
